@@ -1,0 +1,126 @@
+.navigation-menu {
+  background-color: white;
+  padding: 0px 10px;
+  border-top: 1px solid lightgray;
+  text-align: right;
+  padding-left: 80px;
+  padding: relative;
+  /* Add margin to the left of the navigation menu */
+}
+
+.navigation-menu.show {
+  transform: translateX(0);
+}
+/* Add any additional styling for the navbar and dropdown here */
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+
+.dropdown:hover .hover-head-component {
+  display: block; /* Ensure the hover component is visible on hover */
+}
+  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Keep items aligned to the start */
+}
+
+li {
+  margin-left: 20px; /* Adjust margin to separate items */
+  position: relative;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width:140px;
+  background-color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content, .dropdown .dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Adjustments for icon placement */
+img {
+  margin-right: 8px;
+}
+
+.sidebar-button1 {
+  display: flex;
+  color: white;
+  background-color: black;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 20px;
+  margin-bottom: 4px;
+  margin-right: 20px;
+  padding-right: 10px;
+}
+
+/* Modal styles for ForHome component */
+.hover-modal {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 20px;
+  width: 200px; /* Adjust width as needed */
+  border: 1px solid #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navigation-menu {
+    text-align: left;
+    padding-left: 10px;
+    margin: 0;
+  }
+  .sec-sections{
+    margin-left: 10px;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .sidebar-button1 {
+    width: 98%;
+    margin-left: 2px;
+    margin-right: 10px;
+  }
+}

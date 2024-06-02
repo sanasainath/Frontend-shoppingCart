@@ -1,0 +1,112 @@
+/* ProductReviews.css */
+
+.review-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.review-container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add gap between review items */
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px; /* Add border-radius for rounded corners */
+  background-color: #f9f9f9; /* Add background color for better readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for better visual separation */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.review-item:hover {
+  transform: translateY(-10px) rotateY(10deg); /* Slight 3D lift and rotate effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.review-user {
+  font-weight: bold;
+  margin-bottom: 10px; /* Add margin to separate user info from rating */
+  color: #333;
+  font-size: 16px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Add margin to separate rating from comment */
+}
+
+.star-rating {
+  color: #FFD700; /* Set the color for the rating, e.g., yellow */
+  margin-right: 10px; /* Add some spacing between stars and numeric rating */
+  font-size: 20px;
+}
+
+.numeric-rating {
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+}
+
+.review-comment {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .review-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .review-item {
+    padding: 15px;
+  }
+
+  .review-user {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .review-comment {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .review-container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .review-item {
+    padding: 10px;
+  }
+.review-list{
+ margin-left:8px;
+  width: 90%;
+}
+  .review8-user {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .review-comment {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+}

@@ -1,0 +1,36 @@
+/* WishlistTable.module.css */
+.wishlist{
+  background-color: red;
+}
+.wishlist-table-container {
+    overflow-x: auto;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th, .custom-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .remove-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  

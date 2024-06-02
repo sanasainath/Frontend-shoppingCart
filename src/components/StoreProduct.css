@@ -1,0 +1,142 @@
+.page-main-containers {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-by-side-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.carousel-container {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.carousel-container .carousel {
+  margin-top: 20px;
+}
+
+.carousel-container .carousel .slider-wrapper .slider .slide img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.product-section12 {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.product-section12 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: bold;
+}
+
+.product-container19 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-item {
+  width: 100%;
+  max-width: 250px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px 5px 0 0;
+}
+
+.product-infofo {
+  padding: 15px;
+  text-align: center;
+  background-color: #f9f9f9;
+  flex: 1;
+  display: block;
+  border-top: 1px solid #ddd;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.product-infofo p {
+  margin: 5px 0;
+}
+
+.product-named {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-descriptiond {
+  font-size: 16px;
+  color: #666;
+}
+
+.product-priced {
+  font-weight: bold;
+  font-size: 16px;
+  color: #27ae60;
+}
+
+.product-link1 {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.product-link1:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .side-by-side-container {
+    flex-direction: column;
+  }
+  .product-item {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  .product-container19 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-container{
+    display: none;
+  }
+}

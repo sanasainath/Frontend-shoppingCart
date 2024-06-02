@@ -1,0 +1,27 @@
+.mobile-cart-table {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobile-cart-item {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .mobile-cart-item-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .mobile-cart-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 10px;
+  }
+  
+  .mobile-cart-item img {
+    margin-bottom: 8px;
+  }

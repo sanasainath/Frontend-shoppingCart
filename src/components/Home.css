@@ -1,0 +1,142 @@
+/* Home.css */
+.home-page{
+  display: flex;
+  flex-direction: column;
+  background-color:#F2F2F2;
+  width: 100%;
+  position: relative;
+
+}
+.image-first {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; /* Set maximum width to 100% */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image-first img {
+  max-width: 100%; /* Set maximum width to 100% */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+
+
+
+.product-zone {
+  /* position: relative; */
+  background-color: white;
+  width: 85%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subcategory-zone {
+  /* Additional styles for the zone containing subcategories */
+  margin-left: 10px;
+}
+/* @media (max-width: 768px) {
+.image-first{
+  padding-left: 10px;
+}
+.navigation-menu {
+  
+  display: flex;
+  flex-direction: column;
+
+  top: 100px;
+  left: 0;
+  
+ 
+
+}
+ul {
+  list-style-type: none;
+  
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+}
+} */
+.ddd{
+  margin-left: 78px;
+  
+ }
+
+.dddd{
+ margin-left: 38px;
+
+}
+@media (max-width: 1200px) {
+  .ddd{
+   margin-left: 50px;
+   
+  }
+
+.dddd{
+  margin-left: 20px;
+
+}
+}
+@media (max-width: 990px) {
+  .ddd{
+    margin-left: 40px;
+    
+   }
+ 
+ .dddd{
+   margin-left: 10px;
+ 
+ }
+}
+ @media (max-width: 670px) {
+  .ddd{
+    margin-left: 20px;
+    
+   }
+ 
+ .dddd{
+   margin-left: -10px;
+ 
+ }
+
+}
+
+@media (max-width: 670px) {
+  .ddd{
+    margin-left: 0px;
+    
+   }
+ 
+ .dddd{
+   margin-left: -10px;
+ 
+ }
+}
+
+@media (max-width: 400px) {
+  .dddd{
+    margin-left: 0px;
+  
+  }
+
+}
+
+
+@media screen and (max-width:600px)
+{
+  .image-first {
+
+  margin:0 10px;
+  }
+
+
+}

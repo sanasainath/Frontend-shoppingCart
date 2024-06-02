@@ -1,0 +1,73 @@
+.custom-edit-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .custom-edit-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .close-btn {
+    float: right;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background-color: crimson;
+  }
+  
+  .picture-preview {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+  }
+  
+  .picture-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

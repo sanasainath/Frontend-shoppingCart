@@ -1,0 +1,82 @@
+/* BlogPost.css */
+.blog-post {
+    max-width: 800px;
+    margin: 100px auto 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .blog-post:hover {
+    transform: rotateY(5deg) rotateX(5deg) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #008080;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: slideInTitle 0.5s ease forwards;
+  }
+  
+  .author {
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
+    opacity: 0;
+    animation: slideInAuthor 0.5s ease forwards;
+  }
+  
+  .content {
+    line-height: 1.8;
+    color: #333;
+    opacity: 0;
+    animation: fadeInContent 0.5s ease forwards;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  @keyframes slideInTitle {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInAuthor {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInContent {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

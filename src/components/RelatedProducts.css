@@ -1,0 +1,105 @@
+/* RelatedProducts.css */
+
+.ohonah {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto; /* Center horizontally and add margin */
+  gap: 10px; /* Added for better spacing */
+}
+
+.opop {
+  text-decoration: none;
+  flex: 1 1 calc(50% - 20px); /* Flex properties to make items responsive */
+  max-width: 300px; /* Ensures the max width of the card */
+  margin: 10px;
+  padding: 20px; /* Increased padding for better spacing */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Added border radius for a modern look */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  background: linear-gradient(145deg, #f5f7fa, #c3cfe2); /* Gradient background for modern look */
+  overflow: hidden; /* Ensures elements don't overflow the card */
+  position: relative; /* For pseudo-elements */
+}
+
+.opop::before,
+.opop::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%) translateY(-50%) scale(0);
+}
+
+.opop:hover::before,
+.opop:hover::after {
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.opop:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+.related-product-image {
+  width: 100%;
+  height: 200px; /* Fixed height to maintain consistency */
+  object-fit: contain; /* Ensures the image fits within the box without cropping */
+  margin-bottom: 10px;
+  border-radius: 4px; /* Matches the border radius of the container */
+  transition: transform 0.3s;
+}
+
+.opop:hover .related-product-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.opop p {
+  margin: 10px 0; /* Consistent spacing for text elements */
+  font-size: 16px; /* Slightly increased font size for readability */
+  color: #333; /* Darker color for better readability */
+}
+
+.add-to-cart1 {
+  background-color: #ff6347; /* Tomato color for a vibrant button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart1:hover {
+  background-color: #ff4500; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+
+   
+@media (max-width: 479px) {
+  .opop {
+    flex: 1 1 100%; /* Full width on small screens */
+    max-width: none; /* Remove max-width */
+    overflow-x: ;
+  }
+}
+
+/* For screens between 480px and 768px */
+@media (min-width: 480px) and (max-width: 768px) {
+  .opop {
+    flex: 1 1 calc(50% - 20px); /* Two columns layout */
+  }
+}
+    
+
+

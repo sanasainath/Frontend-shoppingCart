@@ -1,0 +1,94 @@
+/* Base styles for the table */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table td, .custom-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.custom-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.custom-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td, .responsive-table th {
+    display: block;
+    width: 100%;
+  }
+
+  .responsive-table thead {
+    display: none;
+  }
+
+  .responsive-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+  }
+
+  .responsive-table td {
+    text-align: left;
+    padding-left: 15px;
+    position: relative;
+    padding-right: 15px;
+  }
+
+  .responsive-table .product-cell,
+  .responsive-table .price-cell,
+  .responsive-table .quantity-cell,
+  .responsive-table .subtotal-cell {
+    margin-bottom: 10px;
+  }
+
+  .responsive-table .cell-header {
+    display: block;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+  }
+
+  .responsive-table .remove-btn {
+    color: red;
+    font-weight: 900;
+    background-color: #f4f4f4;
+    border: none;
+    cursor: pointer;
+  }
+
+  .responsive-table .product-image {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .responsive-table .quantity-btn {
+    background-color: #f4f4f4;
+    color: red;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+
+  .responsive-table .no-products {
+    font-size: 11px;
+    padding: 14px;
+    font-weight: 600;
+  }
+
+  .responsive-table .product-cell {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

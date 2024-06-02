@@ -1,0 +1,89 @@
+.hover-modal {
+  background-color: #F5DEB3; /* Lighter tan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 20px;
+  width: 1000%; /* Adjust width as needed */
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 100%; /* Position below the Home link */
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.detn{
+  margin-right: 370px;
+}
+@media (max-width: 1051px) {
+  .hover-modal {
+
+
+  width: 900%;
+  }
+  .detn{
+    margin-right: 340px;
+  }
+}
+@media (max-width: 940px) {
+  .hover-modal {
+
+
+  width: 800%;
+  }
+  .detn{
+    margin-right: 300px;
+  }
+}
+@media (max-width: 850px) {
+  .hover-modal {
+
+
+  width: 720%;
+  }
+  .detn{
+    margin-right: 250px;
+  }
+}
+
+@media (max-width: 780px) {
+  .hover-modal {
+
+
+  width: 650%;
+  }
+  .detn{
+    margin-left: 250px;
+  }
+}
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hover-modal {
+    width: 100%;
+    left: 0;
+    top: 100%;
+    padding: 12px; /* Adjust padding for smaller screens */
+  }
+  .detn{
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 515px) {
+
+.detn{
+  margin-left: 170px;
+
+}
+}
+/* Further adjustments for very small screens, like mobile phones */
+@media (max-width: 480px) {
+  .hover-modal {
+    width: 100%;
+    left: 0;
+    top: 100%;
+    padding: 8px; /* Further adjust padding for very small screens */
+  }
+  .detn{
+    margin-left: 130px;
+  
+  }
+}

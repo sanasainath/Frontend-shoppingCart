@@ -1,0 +1,254 @@
+/* ProductDetailsPage.css */
+
+.product-details-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 80px;
+  padding-left: 70px;
+  max-width: 1200px;
+  
+}
+
+.product-images-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.main-image {
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.thumbnail-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail-image {
+  width: 50px;
+  height: auto;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.product-details1 {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 20px;
+  margin: 0;
+}
+
+.product-details1 h2 {
+  margin-bottom: 10px;
+}
+
+.product-details1 p {
+  margin: 5px 0;
+}
+.des1{
+  width: 100%;
+  margin-right: 0px;
+}
+
+.action-buttons1 {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-to-cart,
+.add-to-wishlist {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.add-to-wishlist {
+  background-color: #f44336;
+}
+
+.nam {
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+.ratings-reviews-heading {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1285px) {
+
+  .product-details-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0; /* Reset padding to avoid overflow */
+    padding-right: 10px; /* Add padding for some space on sides */
+    gap: 40px; /* Reduce gap to fit content better */
+  }
+
+  .product-images-container {
+    width: 90%;
+  }
+
+  .main-image {
+    margin: 0;
+    width: 70%;
+  }
+
+  .thumbnail-image {
+    width: 40px;
+  }
+
+  .product-details1 {
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-details1 p {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+
+
+}
+
+/* Tablets and small desktops (768px to 991px) */
+@media (max-width: 991px) {
+  .product-details-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0; /* Reset padding to avoid overflow */
+    padding-right: 10px; /* Add padding for some space on sides */
+    gap: 40px; /* Reduce gap to fit content better */
+  }
+
+  .product-images-container {
+    width: 100%;
+  }
+
+  .main-image {
+    margin: 0;
+    width: 90%;
+  }
+
+  .thumbnail-image {
+    width: 40px;
+  }
+
+  .product-details1 {
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-details1 p {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+
+  .action-buttons1 {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .add-to-cart,
+  .add-to-wishlist {
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile devices (576px to 767px) */
+@media (max-width: 767px) {
+  .product-details-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+
+  .product-images-container {
+    width: 80%;
+  }
+
+  .main-image {
+    margin: 0;
+    width: 90%;
+  }
+
+  .thumbnail-image {
+    width: 40px;
+  }
+
+  .product-details1 {
+    width: 80%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-details1 p {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+
+  .action-buttons1 {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .add-to-cart,
+  .add-to-wishlist {
+    padding: 8px 16px;
+  }
+}
+
+/* Extra small devices (Below 576px) */
+@media (max-width: 575px) {
+  .main-image {
+    max-height: 300px;
+    width: 70%;
+  }
+  .product-details-container{
+    margin-left: 5px ;
+  }
+
+  .thumbnail-image {
+    width: 30px;
+  }
+
+  .product-details1 {
+    font-size: 16px;
+    width: 70%;
+    /* width: 60%; */
+  }
+  .product-details1 p{
+    /* width: 60%; */
+    
+  }
+
+  .nam {
+    font-size: 20px;
+  }
+}

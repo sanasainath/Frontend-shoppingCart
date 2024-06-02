@@ -1,0 +1,111 @@
+.end-detail-container {
+  padding-top: 50px;
+ 
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Adjust the margin as needed */
+    border: none;
+    border-top: 1px solid #ccc; /* Style and color of the line */
+   
+  }
+  
+  .additional-contenttt {
+    display: flex;
+   justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+
+  .company-info {
+    text-align: center;
+  }
+  .logo-one {
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+
+  .header-imageee {
+    max-width: 90px; /* Adjust the width of the image */
+    margin-right: 10px; /* Add some space between the image and text */
+  }
+  
+  .contact-infooo {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .contact-infooo p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .social-icon {
+    font-size: 25px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #0073b1; /* LinkedIn blue as an example */
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablets and small desktops (768px to 991px) */
+  @media (max-width: 991px) {
+    .additional-contenttt {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-infooo p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Mobile devices (576px to 767px) */
+  @media (max-width: 767px) {
+    .end-detail-container {
+      padding: 0 10px;
+    }
+  
+    .header-image {
+      width: 50px;
+    }
+  
+    .icon {
+      font-size: 18px;
+    }
+  
+    .social-icon {
+      font-size: 20px;
+    }
+  }
+  
+  /* Extra small devices (Below 576px) */
+  @media (max-width: 575px) {
+    .contact-infooo p {
+      font-size: 12px;
+    }
+  
+    .social-icon {
+      font-size: 18px;
+    }
+  }
+  

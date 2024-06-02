@@ -1,0 +1,233 @@
+/* Container for the search results */
+.search-results {
+  padding: 20px;
+}
+
+/* Container for price and sorting filters */
+.all-filters-go {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Styling for the price filters */
+.price-filters {
+  display: flex;
+  height: 50px;
+  gap: 10px;
+}
+
+.price-filters input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the sorting dropdown */
+.sorting-filter select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Container for product cards */
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styling for individual product cards */
+.product-card23 {
+  width: 300px;
+  height: 400px; /* Fixed height for equal-sized cards */
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  perspective: 1000px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Ensure the content is stacked vertically */
+}
+
+.product-card23:hover {
+  transform: scale(1.05) rotateY(10deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.product-image23 img {
+  width: 100%;
+  height: 200px; /* Fixed height for image */
+  object-fit: contain;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card23:hover .product-image23 img {
+  transform: scale(1.1);
+}
+
+/* Styling for the product details */
+.product-details23 {
+  padding: 15px;
+  text-align: center;
+ 
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.product-details23 h3 {
+  font-size: 1.2em;
+  margin-bottom: 0px;
+  color: #333;
+  margin-top: 0; /* Remove top margin */
+}
+
+.product-details23 .product-price23 {
+  font-size: 1.1em;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+.product-details23 .product-rating23 {
+  font-size: 0.9em;
+  color: #f39c12;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .product-card23 {
+    width: 200px;
+    height: 320px; /* Fixed height for equal-sized cards */
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    perspective: 1000px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Ensure the content is stacked vertically */
+  }
+  .product-image23 img {
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 100px;
+    height: 100px; /* Fixed height for image */
+    object-fit:contain;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  .product-details23 {
+    margin-top: -10px;
+    padding: 0px 15px;
+    text-align: center;
+    flex: 1; /* Make details take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+
+
+@media (max-width: 768px) {
+
+.results-container{
+  margin-top: 100px;
+  
+}
+
+  .product-card23 {
+    width: 200px;
+    height: 320px; /* Fixed height for equal-sized cards */
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    perspective: 1000px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Ensure the content is stacked vertically */
+  }
+  .product-image23 img {
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 100px;
+    height: 100px; /* Fixed height for image */
+    object-fit:contain;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  .product-details23 {
+    margin-top: -10px;
+    padding: 0px 15px;
+    text-align: center;
+    flex: 1; /* Make details take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .price-filters
+  {
+    flex-direction: column;
+    width: 70%;
+  }
+  .sorting-filter{
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 392px) {
+  .search-one{
+    width: 96px;
+  }
+  .product-card23 {
+    width: 160px;
+   
+    height: 320px; /* Fixed height for equal-sized cards */
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    perspective: 1000px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Ensure the content is stacked vertically */
+  }
+  .product-image23 img {
+    padding-left: 28px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 100px;
+    height: 100px; /* Fixed height for image */
+    object-fit:contain;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  .product-details23 {
+    margin-top: -10px;
+    padding: 0px 3px;
+    text-align: center;
+    flex: 1; /* Make details take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+  }
+
+
+
+}

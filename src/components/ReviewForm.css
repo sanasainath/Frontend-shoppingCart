@@ -1,0 +1,80 @@
+/* ReviewForm.css */
+
+.review-form-container {
+  margin: 20px ; /* Adjust margin for smaller screens */
+  width: 90%;
+  max-width: 600px; /* Set maximum width for larger screens */
+  margin-left: 70px;
+}
+
+.review-form-heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px; /* Adjust margin for smaller screens */
+  margin-right: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.rating-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.star:hover {
+  color: #ffac33;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Make button full-width */
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .review-form-container {
+    margin: 10px auto; /* Adjust margin for smaller screens */
+  }
+  
+  .form-group {
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    margin-right: 10px;
+  }
+  
+  .rating-container {
+    flex-wrap: wrap; /* Wrap stars to new line on smaller screens */
+  }
+}
