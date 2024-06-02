@@ -289,7 +289,7 @@ const orderConfirmation=()=>{
     const currency = 'INR';
     const receiptId = '1234567890';
 
-    const response = await fetch('http://localhost:3001/api/product/ordering', {
+    const response = await fetch('https://backend-shoppingcart-rfe7.onrender.com/api/product/ordering', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -338,7 +338,7 @@ const orderConfirmation=()=>{
           
           const body = {...response,}
 
-          const validateResponse = await fetch('http://localhost:3001/api/validate', {
+          const validateResponse = await fetch('https://backend-shoppingcart-rfe7.onrender.com/api/validate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

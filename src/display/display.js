@@ -7,7 +7,7 @@ const UserDisplay = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/users/sanasainath013@gmail.com');
+        const response = await axios.get('https://backend-shoppingcart-rfe7.onrender.com/api/users/sanasainath013@gmail.com');
         setUserData(response.data);
       } catch (error) {
         console.error('Error occurred:', error);

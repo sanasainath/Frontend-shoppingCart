@@ -13,7 +13,7 @@ function CreateBlog() {
 
     const blog = { title, content, author, tags: tags.split(',').map(tag => tag.trim()) };
 
-    fetch('http://localhost:3001/api/post/blog', {
+    fetch('https://backend-shoppingcart-rfe7.onrender.com/api/post/blog', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
