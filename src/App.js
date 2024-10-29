@@ -43,28 +43,28 @@ function App() {
   const navigate = useNavigate();
   const auth = useSelector((state) => state.auth);
 
-  const isTokenExpired = (token) => {
-    if (!token) return true;
-    const { exp } = jwtDecode(token);
-    return exp < Date.now() / 1000;
-  };
+  // const isTokenExpired = (token) => {
+  //   if (!token) return true;
+  //   const { exp } = jwtDecode(token);
+  //   return exp < Date.now() / 1000;
+  // };
 
-  useEffect(() => {
-    if (auth.token && isTokenExpired(auth.token)) {
-      dispatch(signout());
-      navigate('/signin');
-    }
-  }, [auth.token, dispatch, navigate]);
+  // useEffect(() => {
+  //   if (auth.token && isTokenExpired(auth.token)) {
+  //     dispatch(signout());
+  //     navigate('/signin');
+  //   }
+  // }, [auth.token, dispatch, navigate]);
 
-  useEffect(() => {
-    if (!auth.authenticate) {
-      dispatch(UserLogin());
-    }
+  // useEffect(() => {
+  //   if (!auth.authenticate) {
+  //     dispatch(UserLogin());
+  //   }
 
-    if (auth.authenticate) {
-      dispatch(getInitialData());
-    }
-  }, [auth.authenticate, dispatch]);
+  //   if (auth.authenticate) {
+  //     dispatch(getInitialData());
+  //   }
+  // }, [auth.authenticate, dispatch]);
 
   useEffect(() => {
     dispatch(updateCart());
