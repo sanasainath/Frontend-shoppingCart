@@ -280,26 +280,26 @@ const orderConfirmation=()=>{
 
 
   const paymentHandler = async (event) => {
-    let totalAmount = 0;
-    Object.values(cartItems).forEach(item => {
-        totalAmount += parseFloat(item.price) * item.qty;
-    });
+    // let totalAmount = 0;
+    // Object.values(cartItems).forEach(item => {
+    //     totalAmount += parseFloat(item.price) * item.qty;
+    // });
 
-    const amount =100;
-    const currency = 'INR';
-    const receiptId = '1234567890';
+    // const amount =100;
+    // const currency = 'INR';
+    // const receiptId = '1234567890';
 
-    const response = await fetch('https://backend-shoppingcart-rfe7.onrender.com/api/product/ordering', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        amount,
-        currency,
-        receipt: receiptId
-      })
-    })
+    // const response = await fetch('https://backend-shoppingcart-rfe7.onrender.com/api/product/ordering', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({
+    //     amount,
+    //     currency,
+    //     receipt: receiptId
+    //   })
+    // })
 
     const orderPayload = {
       user: auth.user._id, // Replace with the actual user ID
@@ -322,92 +322,93 @@ const orderConfirmation=()=>{
     };
     
 
-      const order = await response.json();
-      console.log('order', order);
+      // const order = await response.json();
+      // console.log('order', order);
 
 
-      var option = {
-        key:"",
-        amount,
-        currency,
-        name:"",
-        description: "Test Transaction",
-        image:"https://i.ibb.co/5Y3m33n/test.png",
-        order_id:order.id,
-        handler: async function(response) {
+      // var option = {
+      //   key:"",
+      //   amount,
+      //   currency,
+      //   name:"",
+      //   description: "Test Transaction",
+      //   image:"https://i.ibb.co/5Y3m33n/test.png",
+      //   order_id:order.id,
+      //   handler: async function(response) {
           
-          const body = {...response,}
+      //     const body = {...response,}
 
-          const validateResponse = await fetch('https://backend-shoppingcart-rfe7.onrender.com/api/validate', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(body)
+      //     const validateResponse = await fetch('https://backend-shoppingcart-rfe7.onrender.com/api/validate', {
+      //     method: 'POST',
+      //     headers: {
+      //       'Content-Type': 'application/json'
+      //     },
+      //     body: JSON.stringify(body)
 
-          })
+      //     })
 
-          const jsonResponse = await validateResponse.json();
+      //     const jsonResponse = await validateResponse.json();
         
-          console.log('jsonResponse', jsonResponse);
-           // Check if payment was successful
-            // Check if the message indicates a successful transaction
-             const {msg}=jsonResponse;
-             console.log("Message:", msg);
-             const trimmedMsg = msg.trim();
-             if (trimmedMsg === "Transaction is legit!") {
-                 console.log("Transaction is legit!");
+      //     console.log('jsonResponse', jsonResponse);
+      //      // Check if payment was successful
+      //       // Check if the message indicates a successful transaction
+      //        const {msg}=jsonResponse;
+      //        console.log("Message:", msg);
+      //        const trimmedMsg = msg.trim();
+      //        if (trimmedMsg === "Transaction is legit!") {
+      //            console.log("Transaction is legit!");
                  dispatch(addOrder(orderPayload));
+   alert("Order Placed");
                 
-             } else {
+    //          } else {
             
 
-                 console.log("Transaction failed:", msg);
-                 console.log("Transaction failed:", msg);
+    //              console.log("Transaction failed:", msg);
+    //              console.log("Transaction failed:", msg);
 
-                 // Handle the failure case here
-             }
+    //              // Handle the failure case here
+    //          }
              
            
           
-        },
-        prefill: {
-          name: "Sana SainathReddy", 
-          email: "sanasainath013@gmail.com",
-          contact: "9390712622", 
-        },
-        notes: {
-          address: "Razorpay Corporate Office",
-        },
-        theme: {
-          color: "#3399cc",
-        },
-      }
+    //     },
+    //     prefill: {
+    //       name: "Sana SainathReddy", 
+    //       email: "sanasainath013@gmail.com",
+    //       contact: "9390712622", 
+    //     },
+    //     notes: {
+    //       address: "Razorpay Corporate Office",
+    //     },
+    //     theme: {
+    //       color: "#3399cc",
+    //     },
+    //   }
 
 
       
-      var rzp1 = new Razorpay(option);
-    //   rzp1.on('payment.success', async function (response) {
-    //     // Payment was successful
-    //     console.log('Payment successful:', response);
+    //   var rzp1 = new Razorpay(option);
+    // //   rzp1.on('payment.success', async function (response) {
+    // //     // Payment was successful
+    // //     console.log('Payment successful:', response);
 
-    //     // Execute your function here after successful transaction
-    //     await dispatch(addOrder(orderPayload));
+    // //     // Execute your function here after successful transaction
+    // //     await dispatch(addOrder(orderPayload));
 
-    //     // Optionally, you can perform any other actions here
-    // });
-      rzp1.on("payment.failed", function(response) {
-        alert(response.error.code);
-        alert(response.error.description);
-        alert(response.error.source);
-        alert(response.error.step);
-        alert(response.error.reason);
-        alert(response.error.metadata.order_id);
-        alert(response.error.metadata.payment_id);
-      })
+    // //     // Optionally, you can perform any other actions here
+    // // });
+    //   rzp1.on("payment.failed", function(response) {
+    //     alert(response.error.code);
+    //     alert(response.error.description);
+    //     alert(response.error.source);
+    //     alert(response.error.step);
+    //     alert(response.error.reason);
+    //     alert(response.error.metadata.order_id);
+    //     alert(response.error.metadata.payment_id);
+    //   })
 
-      rzp1.open();
-      event.preventDefault();
+    //   rzp1.open();
+    //   event.preventDefault();
 
   }
  
