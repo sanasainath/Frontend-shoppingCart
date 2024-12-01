@@ -26,15 +26,54 @@ const FlipSign = () => {
         }
     }, [isAuthenticated, navigate]);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const user = {
-            email: email,
-            password: password,
-            role: role,
-        };
-        dispatch(login(user));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Complex validation checks
+    if (!email.includes('@') || email.length < 5) {
+        toast.error('Please enter a valid email address.');
+        return;
+    }
+
+    if (password.length < 8) {
+        toast.error('Password must be at least 8 characters long.');
+        return;
+    }
+
+    if (!/[A-Z]/.test(password)) {
+        toast.error('Password must contain at least one uppercase letter.');
+        return;
+    }
+
+    if (!/[a-z]/.test(password)) {
+        toast.error('Password must contain at least one lowercase letter.');
+        return;
+    }
+
+    if (!/[0-9]/.test(password)) {
+        toast.error('Password must contain at least one digit.');
+        return;
+    }
+
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        toast.error('Password must contain at least one special character.');
+        return;
+    }
+
+    if (role === '') {
+        toast.error('Please select a role.');
+        return;
+    }
+
+    // Proceed if all validations pass
+    const user = {
+        email: email,
+        password: password,
+        role: role,
     };
+    dispatch(login(user));
+};
+
 
     return (
         <div className='git'>
