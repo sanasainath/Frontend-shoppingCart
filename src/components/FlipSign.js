@@ -111,7 +111,7 @@ const FlipSign = () => {
                                     className='input'
                                 >
                                     <option value='' style={{ color: 'white', background: '#1f293a' }}>Select Role</option>
-                                    // <option value='user' style={{ color: 'whitesmoke', background: '#1f293a  ' }}>User</option>
+                                    <option value='user' style={{ color: 'whitesmoke', background: '#1f293a  ' }}>User</option>
                                     <option value='admin' style={{ color: 'whitesmoke', background: '#1f293a' }}>Admin</option>
                                 </select>
                             </div>
